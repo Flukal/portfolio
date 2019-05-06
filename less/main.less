@@ -1,0 +1,380 @@
+///////////   Color-Palette   ///////////
+
+@white : #EFF2F4;
+@hellBlue: #006A9D;
+@darkBlue: #02557D;
+@hellBlack: #014363;
+@black: #344356;
+
+///////////   Google-Fonts   ///////////
+
+@biryani: 'Biryani', sans-serif;
+@quicksand: 'Quicksand', sans-serif;
+
+///////////   Starting-Point CSS   ///////////
+
+h1,
+h3 {
+  font-family: @biryani;
+  letter-spacing: 5px;
+}
+
+p {
+  font-family: @quicksand;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  word-spacing: 3px;
+}
+
+.active {
+  color: @hellBlue!important;
+}
+
+body {
+  height: 100%;
+  width: auto;
+  display: grid;
+  margin: 0;
+  grid-template-rows: auto auto;
+  background-color: @white;
+}
+///////////   Start Header   ///////////
+header {
+  display: grid;
+  grid-template-rows: 60% 20% 20%;
+  grid-template-areas: "header2" "header3" "header1";
+  justify-content: center;
+  height: 100vh;
+  hr{
+    width: 3em;
+  }
+  .imgBox {
+    grid-area: header2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding-top: 3em;
+    img {
+      border-radius: 50%;
+      border: 1px solid @black;
+      height: 73%;
+      width: 50%;
+      margin-bottom: 2em;
+      object-fit: cover;
+    }
+    h3 {
+      margin: 0;
+      font-size: 1.6em;
+      color: @black;
+      text-align: center;
+    }
+    p {
+      margin: 0;
+      margin-top: 0;
+      color: @black;
+    }
+    img,
+    h3,
+    p,
+    hr {
+      animation-duration: 2s;
+      animation-delay: .5s;
+      animation-iteration-count: 1;
+    }
+  }
+
+  .icons {
+    grid-area: header3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; 
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    position: relative;
+    a {
+      display: flex;
+      align-items: center;
+    }
+    svg {
+      font-size: 2.5em;
+      text-align: center;
+      margin: .5em;
+      color: @darkBlue;
+    }
+    svg:hover {
+      color: @hellBlue;
+    }
+  }
+
+  .menuBox {
+    grid-area: header1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    animation-iteration-count: 1;
+    z-index: 2;
+    svg {
+      font-size: 2.8em;
+      padding: 0 .3em;
+      color: @hellBlack;
+    }
+    svg:hover {
+      color: @hellBlue;
+    }
+  }
+}
+///////////   End Header   ///////////
+
+///////////   Class Function FixMenu on Top   ///////////
+
+.fixedMenu {
+  position: fixed;
+  height: 80px;
+  background: @white;
+  width: 100%;
+}
+
+///////////   Start Main   ///////////
+main {
+  display: grid;
+  background-color: @darkBlue;
+  z-index: 1;
+  h1,
+  p {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+  }
+  p {
+    display: flex;
+    align-items: flex-start;
+    padding: 3em;
+  }
+
+  ///////////   Start WelcomeBox   ///////////
+  .welcomeBox {
+    background: @hellBlue;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 30% 80%;
+    text-align: center;
+    p {
+      margin-top: 2em;
+    }
+  }
+  ///////////   Start SkillsBox   ///////////
+  .skillsBox { 
+    background: @darkBlue;
+    height: 100%;
+    display: grid;
+    padding: 0 2em;
+    p {
+      margin-top: 2em;
+    }
+    .itemBox {
+      color: @white;
+      width: 100%;
+      margin-bottom: 1em;
+      h3{
+        font-family: @quicksand;
+      }
+      div{
+        background: rgba(239, 242, 244, 0.3);
+        box-sizing: border-box;
+        color: transparent;
+      }
+    }
+  }
+  ///////////   Start Portfolio   ///////////
+  .portfolioBox { 
+    display: grid;
+    background: @hellBlack;
+    height: 100%;
+    margin-top: 4em;
+    h1 {
+      margin-bottom: 1em;
+    }
+    .repoBox {
+      display: grid;
+      grid-template-rows: 40% 50%;
+      grid-template-areas: "title" "button";
+      border: 1px solid @white;
+      margin: 1em;
+      background: rgba(0, 0, 0, .1);
+      height: 11em;
+      text-align: center;
+      h3 {
+        display: grid;
+        grid-area: title;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+      .btnBox {
+        display: grid;
+        grid-area: button;
+        grid-template-columns: 50% 50%;
+        align-content: center;
+        font-family: @quicksand;
+        :hover {
+          color: @hellBlue;
+          background-color: @white;
+        }
+        a {
+          text-decoration: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid @white;
+          height: 3em;
+          background-color: transparent;
+          margin: 1em;
+          margin-bottom: .5em;
+          color: @white;
+        }
+      }
+    }
+  } ///////////   End Portfolio   ///////////
+
+  ///////////   Start LinkToGithub   ///////////
+  .linkGitBtn {
+    display: flex;
+    background: #014363;
+    height: 100%;
+    margin-top: 4em;
+    justify-content: center;
+    margin-bottom: 2em;
+    .btnBox {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      font-family: 'Quicksand',sans-serif;
+      width: 100%;
+      height: 2em;
+      align-items: center;
+      justify-content: center;
+      font-family: @quicksand;
+      :hover {
+        color: @hellBlue;
+        text-decoration: line-through;
+      }
+      a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid @white;
+        height: 3em;
+        background-color: @white;
+        margin: 0 1em;
+        color: @black;
+        text-align: center;
+        padding: .5em;
+        background-clip: content-box;
+      }
+    }
+  }
+  
+  ///////////   Start Footer   ///////////
+  footer { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    padding: 0 2em;
+    background-color: @white;
+    height: 3em;
+    margin-top: 4em;
+    .icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        display: flex;
+        align-items: center;
+      }
+      svg {
+        font-size: 1.5em;
+        text-align: center;
+        padding-left: .5em;
+        color: @darkBlue;
+      }
+      svg:hover {
+        color: @hellBlue;
+      }
+    }
+    .copyright {
+      display: flex;
+      align-items: center;
+      font-weight: 900;
+      color: @darkBlue;
+      padding: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  } ///////////   End Header   ///////////
+} ///////////   End Header   ///////////
+
+///////////   Start Media Query 700px   ///////////
+
+@media screen and (min-width: 700px) {
+  body {
+    width: auto;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: @white;
+  }
+  header {
+    position: sticky; 
+    top: 0;
+    .menuBox .fa-home{
+      display: none;
+    }
+  }
+  .fixedMenu {
+    position: static;
+    height: auto;
+    background: transparent;
+  }
+  main {
+    display: grid;
+    background-color: @darkBlue;
+    h1,
+    p {
+      color: white;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      margin-top: 3em;
+    }
+    footer{
+      justify-content: center;
+      .icons {
+        display: none;
+      }
+    } 
+  }
+}
+
+///////////   Start Media Query 1137px   ///////////
+
+@media screen and (min-width: 1137px) {
+  .portfolioBox {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+
+    h1 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+}
