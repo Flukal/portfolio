@@ -70,8 +70,7 @@ $(document).ready(() => {
                       {name : "Css3", width: "98%" }, 
                       {name : "Javascript", width: "65%" }, 
                       {name : "Git", width: "73%" }, 
-                      {name : "JQuery", width: "72%"}, 
-                      {name : "NodeJS", width: "36%"}, 
+                      {name : "JQuery", width: "72%"},
                       {name : "React", width: "67%"},
                       {name : "Bootstrap", width: "93%"}, 
                       {name : "Wordpress", width: "55%"}
